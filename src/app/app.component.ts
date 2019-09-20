@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gestion-stock-client';
+
+  showSideBar = false
+
+
+  showHide(showSideBar) {
+
+    this.showSideBar = showSideBar
+
+  }
 }

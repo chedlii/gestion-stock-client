@@ -1,2 +1,16 @@
-<span>{{ title }} app is running!</span>
-<router-outlet></router-outlet>
+<div class="container-full">
+    <app-header (showHide)="showHide($event)" [showSideBar]="showSideBar"></app-header>
+    <div class="row">
+
+        <div class="col-lg-2" *ngIf=showSideBar>
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-lg-10">
+
+            <app-list-produit></app-list-produit>
+        </div>
+
+
+    </div>
+    <router-outlet></router-outlet>
+</div>
